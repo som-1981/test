@@ -12,6 +12,7 @@
  * You may obtain a copy of the License at
  *
  *     https://opensource.org/licenses/BSD-3-Clause
+ *     Rakuten Symphony
  */
 
 #define _GNU_SOURCE /* asprintf() */
