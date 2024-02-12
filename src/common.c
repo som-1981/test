@@ -70,6 +70,11 @@ np_ignore_rpc(sr_session_ctx_t *ev_sess, sr_event_t event, int *rc)
     return 0;
 }
 
+int np_test(uint32_t ms)
+{
+    /* No action */
+}
+
 int
 np_sleep(uint32_t ms)
 {
