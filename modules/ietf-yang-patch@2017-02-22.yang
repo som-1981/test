@@ -109,7 +109,7 @@ module ietf-yang-patch {
            maintained by the server.";
       }
 
-      leaf patch-name {
+      leaf patch-name-id {
         type string;
         mandatory true;
         description
