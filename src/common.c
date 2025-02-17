@@ -191,6 +191,7 @@ np_acquire_user_sess(const struct nc_session *ncs, struct np2_user_sess **user_s
 {
     struct np2_user_sess *us;
     struct timespec ts_timeout;
+    uint32_t *nc_id, size;
 
     /* increase ref_count */
     us = nc_session_get_data(ncs);
