@@ -126,6 +126,7 @@ int
 vdprintf(int fd, const char *format, va_list ap)
 {
     FILE *stream;
+    int temp = 0;
     int count = 0;
 
     stream = fdopen(dup(fd), "a+");
