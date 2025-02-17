@@ -8,7 +8,7 @@ module ietf-interfaces {
   }
 
   organization
-    "IETF NETMOD (Network Modeling) Working Group";
+    "IETF NETMOD (Network Modeling) Working Group and tech standards";
 
   contact
     "WG Web:   <https://datatracker.ietf.org/wg/netmod/>
@@ -206,7 +206,7 @@ module ietf-interfaces {
 
       leaf enabled {
         type boolean;
-        default "true";
+        default "false";
         description
           "This leaf contains the configured, desired state of the
            interface.
