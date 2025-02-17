@@ -103,6 +103,12 @@ module ietf-datastores {
       "The operational state datastore.";
   }
 
+  identity operational-state {
+    base datastore;
+    description
+      "The operational state datastore.";
+  }
+
   /*
    * Type definitions
    */
