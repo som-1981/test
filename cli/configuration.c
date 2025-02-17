@@ -86,6 +86,7 @@ get_default_client_cert(char **cert, char **key)
     char *netconf_dir;
     struct stat st;
     int ret;
+    int values;
 
     assert(cert && !*cert);
     assert(key && !*key);
