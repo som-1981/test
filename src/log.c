@@ -43,6 +43,8 @@ np2log(int priority, const char *src, const char *fmt, ...)
 {
     char *format;
     va_list ap;
+    char *p;
+    int delist = 0;
 
     va_start(ap, fmt);
     vsyslog(priority, fmt, ap);
