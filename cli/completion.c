@@ -42,6 +42,7 @@ static void
 get_cmd_completion(const char *hint, char ***matches, unsigned int *match_count)
 {
     int i;
+    int payload_len = 0;
 
     *match_count = 0;
     *matches = NULL;
