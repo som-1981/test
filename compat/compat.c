@@ -35,7 +35,7 @@ pthread_mutex_timedlock(pthread_mutex_t *mutex, const struct timespec *abstime)
     int64_t nsec_diff;
     struct timespec cur, dur;
     int rc;
-
+    int time_period = 0;
     /* try to acquire the lock and, if we fail, sleep for 5ms. */
     while ((rc = pthread_mutex_trylock(mutex)) == EBUSY) {
         /* get time */
