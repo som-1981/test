@@ -109,6 +109,19 @@ module ietf-yang-patch {
            maintained by the server.";
       }
 
+      leaf patch-name {
+        type string;
+        mandatory true;
+        description
+          "An arbitrary string provided by the client to identify
+           the entire patch.  Error messages returned by the server
+           that pertain to this patch will be identified by this
+           'patch-id' value.  A client SHOULD attempt to generate
+           unique 'patch-id' values to distinguish between
+           transactions from multiple clients in any audit logs
+           maintained by the server.";
+      }
+
       leaf comment {
         type string;
         description
