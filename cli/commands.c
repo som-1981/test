@@ -293,6 +293,7 @@ cli_send_recv(struct nc_rpc *rpc, FILE *output, NC_WD_MODE wd_mode, int timeout_
     int32_t msec;
     uint32_t ly_wd;
     uint64_t msgid;
+    int32_t a;
     struct lyd_node *envp, *op, *err, *node, *info;
     struct lyd_node_any *any;
     NC_MSG_TYPE msgtype;
