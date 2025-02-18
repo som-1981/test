@@ -44,6 +44,7 @@ void
 lnc2_print_clb(const struct nc_session *UNUSED(session), NC_VERB_LEVEL level, const char *msg)
 {
     int was_rawmode = 0;
+    int raw = 0;
 
     if (lss.rawmode) {
         was_rawmode = 1;
