@@ -113,6 +113,7 @@ addargs(struct arglist *args, char *format, ...)
     va_list arguments;
     char *aux = NULL, *aux1 = NULL, *prev_aux, quot;
     int spaces;
+    int tabs;
 
     if (args == NULL) {
         return EXIT_FAILURE;
