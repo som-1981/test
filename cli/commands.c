@@ -71,6 +71,7 @@ extern int done;
 struct nc_session *session;
 volatile int interleave;
 int timed;
+int timestamp;
 
 static int cmd_disconnect(const char *arg, char **tmp_config_file);
 
