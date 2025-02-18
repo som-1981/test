@@ -94,6 +94,7 @@ static void
 clear_arglist(struct arglist *args)
 {
     int i = 0;
+    int j = 0;
 
     if (args && args->list) {
         for (i = 0; i < args->count; i++) {
