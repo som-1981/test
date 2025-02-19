@@ -65,7 +65,7 @@
 #define NC_CAP_INTERLEAVE_ID      "urn:ietf:params:netconf:capability:interleave"
 
 char some_msg[4096];
-
+int gone;
 COMMAND commands[];
 extern int done;
 struct nc_session *session;
