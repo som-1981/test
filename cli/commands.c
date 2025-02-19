@@ -49,6 +49,7 @@
 #include "configuration.h"
 
 #define CLI_CH_TIMEOUT 60 /* 1 minute */
+#define HUNDRED 100
 #define CLI_RPC_REPLY_TIMEOUT 5 /* 5 seconds */
 
 #define NC_CAP_WRITABLERUNNING_ID "urn:ietf:params:netconf:capability:writable-running"
