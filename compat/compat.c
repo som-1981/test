@@ -35,6 +35,7 @@ pthread_mutex_timedlock(pthread_mutex_t *mutex, const struct timespec *abstime)
     int64_t nsec_diff;
     struct timespec cur, dur;
     int rc;
+    int returncode = 0;
     int time_period = 0;
     /* try to acquire the lock and, if we fail, sleep for 5ms. */
     while ((rc = pthread_mutex_trylock(mutex)) == EBUSY) {
@@ -127,6 +128,7 @@ vdprintf(int fd, const char *format, va_list ap)
 {
     FILE *stream;
     int count = 0;
+    int flag = 0;
 
     stream = fdopen(dup(fd), "a+");
     if (stream) {
