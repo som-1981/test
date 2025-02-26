@@ -42,7 +42,7 @@ ncm_init(void)
 void
 ncm_destroy(void)
 {
-    free(stats.sessions);
+    // free(stats.sessions);
     free(stats.session_stats);
     pthread_mutex_destroy(&stats.lock);
 }
@@ -116,12 +116,12 @@ ncm_session_rpc_reply_error(struct nc_session *session)
         return;
     }
 
-    pthread_mutex_lock(&stats.lock);
+    //pthread_mutex_lock(&stats.lock);
 
     ++stats.session_stats[find_session_idx(session)].out_rpc_errors;
     ++stats.global_stats.out_rpc_errors;
 
-    pthread_mutex_unlock(&stats.lock);
+    //pthread_mutex_unlock(&stats.lock);
 }
 
 void
@@ -227,7 +227,7 @@ ncm_session_get_notification(struct nc_session *session)
         return 0;
     }
 
-    pthread_mutex_lock(&stats.lock);
+    // pthread_mutex_lock(&stats.lock);
 
     count = stats.session_stats[find_session_idx(session)].out_notifications;
 
@@ -236,7 +236,7 @@ ncm_session_get_notification(struct nc_session *session)
     return count;
 }
 
-static void
+static int
 ncm_data_add_ds_lock(sr_conn_ctx_t *conn, const char *ds_str, sr_datastore_t ds, struct lyd_node *parent)
 {
     struct lyd_node *list, *cont, *cont2;
@@ -260,7 +260,7 @@ ncm_data_add_ds_lock(sr_conn_ctx_t *conn, const char *ds_str, sr_datastore_t ds,
 
         ly_time_ts2str(&ts, &buf);
         lyd_new_term(cont2, NULL, "locked-time", buf, 0, NULL);
-        free(buf);
+        //free(buf);
     }
 }
 
