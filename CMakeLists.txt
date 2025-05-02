@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.5...3.28.1)
 
 project(netopeer2 C)
 set(NETOPEER2_DESC "NETCONF tools suite including a server and command-line client")
@@ -46,7 +46,7 @@ endif()
 # Generic version of not only the library. Major version is reserved for really big changes of the project,
 # minor version changes with added functionality (new tool, functionality of the tool or library, ...) and
 # micro version is changed with a set of small changes or bugfixes anywhere in the project.
-set(NP2SRV_VERSION 2.2.13)
+set(NP2SRV_VERSION 2.2.15)
 
 # libyang required version
 set(LIBYANG_DEP_VERSION 2.1.146)
@@ -54,8 +54,8 @@ set(LIBYANG_DEP_SOVERSION 2.46.1)
 set(LIBYANG_DEP_SOVERSION_MAJOR 2)
 
 # libnetconf2 required version
-set(LIBNETCONF2_DEP_VERSION 3.0.8)
-set(LIBNETCONF2_DEP_SOVERSION 4.1.5)
+set(LIBNETCONF2_DEP_VERSION 3.0.10)
+set(LIBNETCONF2_DEP_SOVERSION 4.1.7)
 set(LIBNETCONF2_DEP_SOVERSION_MAJOR 4)
 
 # sysrepo required version
